@@ -453,7 +453,7 @@ void core(void){
 
 			for (;iblock<maxcombination && status==0;iblock+=1){
 				computePwd (iblock, maxcombination, strlen(CORE_charset),CORE_charset, wordlength, word);
-				word[wordlength]='\0';
+				word[wordlength]='\n';
 				value=cpu_Core_charset ( CORE_encryptionAlgorithm,header, CORE_charset, word,  wordlength,CORE_keyDerivationFunction, CORE_prefix);
 
 				if (value==1)
